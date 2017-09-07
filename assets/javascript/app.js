@@ -111,7 +111,7 @@ function generateHTML() {
 
 }
 
-//==================== A function to determine if quiz has been completed for timer ====================//
+//
 function wait() {
     if (questionCount < 9) {
         questionCount++;
@@ -123,7 +123,7 @@ function wait() {
     }
 }
 
-//==================== A function for the countdown timer ====================//
+//
 function timeWrapper() {
     clock = setInterval(thirtySeconds, 1000);
 
@@ -140,13 +140,13 @@ function timeWrapper() {
 }
 
 
-//==================== A function to display quiz results & place a reset game button ====================//
+//
 function final() {
     questionHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + answeredCorrect + "</p>" + "<p>Wrong Answers: " + answeredIncorrect + "</p>" + "<p>Unanswered: " + notAnswered + "</p>" + "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset The Quiz!</a></p>";
     $(".mainScreen").html(questionHTML);
 }
 
-//==================== A function to reset the game ====================//
+//
 function reset() {
     questionCount = 0;
     answeredCorrect = 0;
