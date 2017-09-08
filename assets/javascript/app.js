@@ -38,7 +38,7 @@ var answeredNone = 0;
 
 
 
-//FUNCTIONS
+//FUNCTIONS//
 
 
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 function notAnswered() {
     answeredNone++;
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + rightAnswers[questionCount] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Time's up!  The correct answer was: " + rightAnswers[questionCount] + "</p>";
     $(".mainScreen").html(questionPage);
     setTimeout(wait, 3000);
 }
@@ -91,7 +91,7 @@ function notAnswered() {
 
 function winFunction() {
     answeredCorrect++;
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + rightAnswers[questionCount] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Right! The answer is: " + rightAnswers[questionCount] + "</p>";
     $(".mainScreen").html(questionPage);
     setTimeout(wait, 4000);
 }
@@ -123,7 +123,7 @@ function wait() {
     }
 }
 
-//
+// Function for a count down timer
 function timeWrapper() {
     clock = setInterval(thirtySeconds, 1000);
 
@@ -140,13 +140,13 @@ function timeWrapper() {
 }
 
 
-//
+// Function for a finale page
 function final() {
-    questionHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + answeredCorrect + "</p>" + "<p>Wrong Answers: " + answeredIncorrect + "</p>" + "<p>Unanswered: " + notAnswered + "</p>" + "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset The Quiz!</a></p>";
+    questionHTML = "<p class='text-center timer-p'>Time: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Results" + "</p>" + "<p class='summary-correct'>Right Answers: " + answeredCorrect + "</p>" + "<p>Wrong Answers: " + answeredIncorrect + "</p>" + "<p> Not answered: " + notAnswered + "</p>" + "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset</a></p>";
     $(".mainScreen").html(questionHTML);
 }
 
-//
+// Function for a reset
 function reset() {
     questionCount = 0;
     answeredCorrect = 0;
