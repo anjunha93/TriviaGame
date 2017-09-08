@@ -82,7 +82,12 @@ $(document).ready(function() {
 
 function notAnswered() {
     answeredNone++;
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Time's up!  The correct answer was: " + rightAnswers[questionCount] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + 
+    counter + 
+    "</span></p>" + 
+    "<p class='text-center'>Time's up!  The correct answer was: " + 
+    rightAnswers[questionCount] + 
+    "</p>";
     $(".mainScreen").html(questionPage);
     setTimeout(wait, 3000);
 }
@@ -91,7 +96,12 @@ function notAnswered() {
 
 function winFunction() {
     answeredCorrect++;
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Right! The answer is: " + rightAnswers[questionCount] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + 
+    counter + 
+    "</span></p>" + 
+    "<p class='text-center'>Right! The answer is: " + 
+    rightAnswers[questionCount] + 
+    "</p>";
     $(".mainScreen").html(questionPage);
     setTimeout(wait, 4000);
 }
@@ -99,14 +109,29 @@ function winFunction() {
 // Function for incorrect answer
 function loseFunction() {
     answeredIncorrect++;
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: " + rightAnswers[questionCount] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + 
+    counter + 
+    "</span></p>" + 
+    "<p class='text-center'>Wrong! The correct answer is: " + 
+    rightAnswers[questionCount] + 
+    "</p>";
     $(".mainScreen").html(questionPage);
     setTimeout(wait, 3000);
 }
 
 // Function to generate HTML
 function generateHTML() {
-    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questions[questionCount] + "</p><p class='first-answer answer'>" + answers[questionCount][0] + "</p><p class='answer'>" + answers[questionCount][1] + "</p><p class='answer'>" + answers[questionCount][2] + "</p><p class='answer'>" + answers[questionCount][3] + "</p>";
+    questionPage = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + 
+    questions[questionCount] + 
+    "</p><p class='first-answer answer'>" + 
+    answers[questionCount][0] + 
+    "</p><p class='answer'>" + 
+    answers[questionCount][1] + 
+    "</p><p class='answer'>" + 
+    answers[questionCount][2] + 
+    "</p><p class='answer'>" + 
+    answers[questionCount][3] + 
+    "</p>";
     $(".mainScreen").html(questionPage);
 
 }
@@ -142,7 +167,21 @@ function timeWrapper() {
 
 // Function for a finale page
 function final() {
-    questionHTML = "<p class='text-center timer-p'>Time: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Results" + "</p>" + "<p class='summary-correct'>Right Answers: " + answeredCorrect + "</p>" + "<p>Wrong Answers: " + answeredIncorrect + "</p>" + "<p> Not answered: " + notAnswered + "</p>" + "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset</a></p>";
+    questionHTML = "<p class='text-center timer-p'>Time: <span class='timer'>" + 
+    counter + 
+    "</span></p>" + 
+    "<p class='text-center'>Results" + 
+    "</p>" + 
+    "<p class='summary-correct'>Right Answers: " + 
+    answeredCorrect + 
+    "</p>" + 
+    "<p>Wrong Answers: " + 
+    answeredIncorrect + 
+    "</p>" + 
+    "<p> Not answered: " + 
+    notAnswered + 
+    "</p>" + 
+    "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset</a></p>";
     $(".mainScreen").html(questionHTML);
 }
 
