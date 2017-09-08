@@ -179,7 +179,7 @@ function final() {
     answeredIncorrect + 
     "</p>" + 
     "<p> Not answered: " + 
-    notAnswered + 
+    answeredNone + 
     "</p>" + 
     "<p class='text-center resetButton-container'><a class='btn btn-danger btn-lg btn-block resetButton' href='#' role='button'>Reset</a></p>";
     $(".mainScreen").html(questionHTML);
