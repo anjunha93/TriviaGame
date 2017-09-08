@@ -89,7 +89,7 @@ function notAnswered() {
     rightAnswers[questionCount] + 
     "</p>";
     $(".mainScreen").html(questionPage);
-    setTimeout(wait, 3000);
+    setTimeout(timer, 3000);
 }
 
 // Function for correct answer
@@ -103,7 +103,7 @@ function winFunction() {
     rightAnswers[questionCount] + 
     "</p>";
     $(".mainScreen").html(questionPage);
-    setTimeout(wait, 4000);
+    setTimeout(timer, 4000);
 }
 
 // Function for incorrect answer
@@ -116,7 +116,7 @@ function loseFunction() {
     rightAnswers[questionCount] + 
     "</p>";
     $(".mainScreen").html(questionPage);
-    setTimeout(wait, 3000);
+    setTimeout(timer, 3000);
 }
 
 // Function to generate HTML
@@ -136,8 +136,8 @@ function generateHTML() {
 
 }
 
-//
-function wait() {
+// Function for a timer 
+function timer() {
     if (questionCount < 9) {
         questionCount++;
         generateHTML();
